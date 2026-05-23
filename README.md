@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Shop Platform
 
 A local business discovery and promotion platform that helps users find the right nearby shops quickly and helps shop owners grow their customer base through visibility and promotion.
@@ -148,3 +149,6 @@ Avoid:
 # 📄 License
 
 This project is currently private and under development.
+=======
+# shop-platform
+>>>>>>> 06de01a4d81983d9bbe96ee2f7e217128cee7c7d
