@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Platform</title>
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/shop-card.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="navbar__brand" href="index.html" aria-label="Shop Platform home">
+        <span class="navbar__logo" aria-hidden="true">SP</span>
+        <span class="navbar__brand-text">Shop Platform</span>
+      </a>
+
+      <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+        <span class="navbar__toggle-line"></span>
+        <span class="navbar__toggle-line"></span>
+        <span class="navbar__toggle-line"></span>
+        <span class="sr-only">Open navigation menu</span>
+      </button>
+
+      <div class="navbar__menu" id="primary-menu">
+        <ul class="navbar__links">
+          <li><a class="navbar__link navbar__link--active" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="navbar__link" href="#">Explore Shops</a></li>
+          <li><a class="navbar__link" href="#">Categories</a></li>
+          <li><a class="navbar__link" href="#">For Owners</a></li>
+        </ul>
+
+        <div class="navbar__actions">
+          <a class="navbar__action navbar__action--secondary" href="#">Sign In</a>
+          <a class="navbar__action navbar__action--primary" href="#">Register Shop</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro">
+      <p class="intro__eyebrow">Local discovery</p>
+      <h1>Find trusted shops near you.</h1>
+      <p>Use this page as the starting point for shared layout and navigation work.</p>
+    </section>
+
+    <section class="shops-section" aria-labelledby="top-shops-title">
+      <div class="shops-section__header">
+        <div>
+          <p class="shops-section__eyebrow">Top shops</p>
+          <h2 id="top-shops-title">Popular nearby picks</h2>
+        </div>
+        <a class="shops-section__link" href="#">View all</a>
+      </div>
+
+      <div class="shop-card-grid">
+        <!-- Reusable shop card: duplicate this article for search results or top-shop lists. -->
+        <article class="shop-card" data-shop-card data-shop-name="Fresh Basket Market">
+          <div class="shop-card__media shop-card__media--grocery">
+            <div class="shop-card__image-placeholder" role="img" aria-label="Shop image placeholder">
+              <span>FB</span>
+            </div>
+            <span class="shop-card__badge">Promoted</span>
+          </div>
+          <div class="shop-card__body">
+            <div class="shop-card__header">
+              <div>
+                <p class="shop-card__category">Grocery</p>
+                <h3 class="shop-card__title">Fresh Basket Market</h3>
+                <p class="shop-card__location">MG Road, Bengaluru</p>
+              </div>
+              <div class="shop-card__rating" aria-label="Rated 4.8 out of 5 from 128 reviews">
+                <span class="shop-card__rating-score">4.8</span>
+                <span class="shop-card__rating-count">128 reviews</span>
+              </div>
+            </div>
+            <p class="shop-card__description">Daily essentials, fresh produce, and fast pickup for nearby customers.</p>
+            <dl class="shop-card__meta">
+              <div>
+                <dt>Distance</dt>
+                <dd>1.2 km</dd>
+              </div>
+              <div>
+                <dt>Area</dt>
+                <dd>MG Road</dd>
+              </div>
+            </dl>
+            <div class="shop-card__footer">
+              <span class="shop-card__tag">Home delivery</span>
+              <a class="shop-card__action" href="#" data-shop-details>View details</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="shop-card" data-shop-card data-shop-name="Urban Thread Studio">
+          <div class="shop-card__media shop-card__media--fashion">
+            <div class="shop-card__image-placeholder" role="img" aria-label="Shop image placeholder">
+              <span>UT</span>
+            </div>
+            <span class="shop-card__badge">Promoted</span>
+          </div>
+          <div class="shop-card__body">
+            <div class="shop-card__header">
+              <div>
+                <p class="shop-card__category">Fashion</p>
+                <h3 class="shop-card__title">Urban Thread Studio</h3>
+                <p class="shop-card__location">City Center, Bengaluru</p>
+              </div>
+              <div class="shop-card__rating" aria-label="Rated 4.6 out of 5 from 96 reviews">
+                <span class="shop-card__rating-score">4.6</span>
+                <span class="shop-card__rating-count">96 reviews</span>
+              </div>
+            </div>
+            <p class="shop-card__description">Modern clothing, custom fits, and seasonal collections for every day.</p>
+            <dl class="shop-card__meta">
+              <div>
+                <dt>Distance</dt>
+                <dd>2.4 km</dd>
+              </div>
+              <div>
+                <dt>Area</dt>
+                <dd>City Center</dd>
+              </div>
+            </dl>
+            <div class="shop-card__footer">
+              <span class="shop-card__tag">Premium listing</span>
+              <a class="shop-card__action" href="#" data-shop-details>View details</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="shop-card" data-shop-card data-shop-name="Volt Care Electronics">
+          <div class="shop-card__media shop-card__media--electronics">
+            <div class="shop-card__image-placeholder" role="img" aria-label="Shop image placeholder">
+              <span>VC</span>
+            </div>
+            <span class="shop-card__badge">Promoted</span>
+          </div>
+          <div class="shop-card__body">
+            <div class="shop-card__header">
+              <div>
+                <p class="shop-card__category">Electronics</p>
+                <h3 class="shop-card__title">Volt Care Electronics</h3>
+                <p class="shop-card__location">Market Lane, Bengaluru</p>
+              </div>
+              <div class="shop-card__rating" aria-label="Rated 4.9 out of 5 from 211 reviews">
+                <span class="shop-card__rating-score">4.9</span>
+                <span class="shop-card__rating-count">211 reviews</span>
+              </div>
+            </div>
+            <p class="shop-card__description">Phone accessories, repairs, and quick support for common device issues.</p>
+            <dl class="shop-card__meta">
+              <div>
+                <dt>Distance</dt>
+                <dd>3.1 km</dd>
+              </div>
+              <div>
+                <dt>Area</dt>
+                <dd>Market Lane</dd>
+              </div>
+            </dl>
+            <div class="shop-card__footer">
+              <span class="shop-card__tag">Repair service</span>
+              <a class="shop-card__action" href="#" data-shop-details>View details</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/navbar.js"></script>
+  <script src="../js/shop-card.js"></script>
+</body>
+</html>
