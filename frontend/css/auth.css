@@ -1,0 +1,231 @@
+/* Auth pages share reusable form primitives for login and registration. */
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 34rem),
+    linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+}
+
+.auth-shell {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 24px 16px;
+}
+
+.auth-shell--wide {
+  align-items: start;
+}
+
+.auth-panel {
+  width: min(100%, 460px);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 24px 60px rgba(23, 32, 51, 0.12);
+}
+
+.auth-shell--wide .auth-panel {
+  width: min(100%, 720px);
+}
+
+.auth-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text);
+  font-weight: 800;
+}
+
+.auth-brand__mark {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  color: #ffffff;
+  background: var(--color-primary);
+  font-weight: 800;
+}
+
+.auth-copy {
+  margin: 28px 0 22px;
+}
+
+.auth-copy__eyebrow {
+  margin: 0 0 8px;
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.auth-copy h1 {
+  margin: 0 0 12px;
+  color: var(--color-text);
+  font-size: 1.9rem;
+  line-height: 1.12;
+}
+
+.auth-copy p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  padding: 6px;
+  background: #eef2f7;
+}
+
+.auth-tab {
+  min-height: 44px;
+  border: 0;
+  border-radius: 8px;
+  color: var(--color-muted);
+  background: transparent;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.auth-tab:hover,
+.auth-tab:focus-visible,
+.auth-tab--active {
+  color: var(--color-primary);
+  background: var(--color-surface);
+  box-shadow: 0 8px 18px rgba(23, 32, 51, 0.08);
+}
+
+.auth-form {
+  display: grid;
+  gap: 16px;
+}
+
+.auth-form.is-hidden {
+  display: none;
+}
+
+.form-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.form-field {
+  display: grid;
+  gap: 8px;
+}
+
+.form-field label {
+  color: var(--color-text);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0 14px;
+  color: var(--color-text);
+  background: var(--color-surface);
+  font: inherit;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+  outline: 0;
+}
+
+.password-field {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.password-field:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.password-field input {
+  border: 0;
+  box-shadow: none;
+}
+
+.password-field input:focus {
+  box-shadow: none;
+}
+
+.password-field button {
+  min-height: 36px;
+  border: 0;
+  border-radius: 8px;
+  margin-right: 6px;
+  padding: 0 12px;
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.auth-submit {
+  min-height: 50px;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background: var(--color-primary);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.auth-submit:hover,
+.auth-submit:focus-visible {
+  background: var(--color-primary-dark);
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.2);
+  transform: translateY(-1px);
+}
+
+.auth-switch {
+  margin: 18px 0 0;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.auth-switch a {
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+@media (min-width: 680px) {
+  .auth-panel {
+    padding: 30px;
+  }
+
+  .auth-copy h1 {
+    font-size: 2.25rem;
+  }
+
+  .auth-tabs,
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Shop Platform</title>
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+  <main class="auth-shell">
+    <section class="auth-panel" aria-labelledby="login-title">
+      <a class="auth-brand" href="index.html" aria-label="Shop Platform home">
+        <span class="auth-brand__mark" aria-hidden="true">SP</span>
+        <span>Shop Platform</span>
+      </a>
+
+      <div class="auth-copy">
+        <p class="auth-copy__eyebrow">Welcome back</p>
+        <h1 id="login-title">Login to discover nearby shops.</h1>
+        <p>Access saved shops, nearby recommendations, and owner tools from one clean dashboard.</p>
+      </div>
+
+      <!-- Reusable auth form field pattern for login and registration pages. -->
+      <form class="auth-form" data-auth-form>
+        <div class="form-field">
+          <label for="login-contact">Email or phone</label>
+          <input id="login-contact" name="contact" type="text" autocomplete="username" placeholder="you@example.com">
+        </div>
+
+        <div class="form-field">
+          <label for="login-password">Password</label>
+          <div class="password-field">
+            <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Enter password">
+            <button type="button" data-password-toggle aria-label="Show password">Show</button>
+          </div>
+        </div>
+
+        <button class="auth-submit" type="submit">Login</button>
+      </form>
+
+      <p class="auth-switch">New to Shop Platform? <a href="register.html">Create an account</a></p>
+    </section>
+  </main>
+
+  <script src="../js/auth.js"></script>
+</body>
+</html>
